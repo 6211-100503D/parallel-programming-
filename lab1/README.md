@@ -18,3 +18,7 @@
 ```bash
 g++ -O2 main.cpp -o matrix
 ./matrix
+
+## График зависимости времени от размера
+
+![График](graph.png)
