@@ -9,7 +9,7 @@ def read_matrix(filename, n):
     return np.array(matrix)
 
 def main():
-    n = 3  # размер матрицы
+    n = 3
     
     A = read_matrix('Matrix(A).txt', n)
     B = read_matrix('Matrix(B).txt', n)
