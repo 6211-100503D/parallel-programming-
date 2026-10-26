@@ -18,12 +18,11 @@ def multiply_sequential(A, B, size):
 
 def verify():
     size = 200
-    
     print("Чтение данных...")
     A = read_matrix("matrix_A.txt")
     B = read_matrix("matrix_B.txt")
     
-    print("Выполнение последовательного умножения для проверки...")
+    print("Последовательное умножение для проверки...")
     start = time.time()
     C_seq = multiply_sequential(A, B, size)
     seq_time = time.time() - start
@@ -36,14 +35,14 @@ def verify():
             if abs(C_seq[i][j] - C_omp[i][j]) > 1e-5:
                 is_correct = False
                 break
-                
+    
     report = {
-        "status": "УСПЕШНО ✅" if is_correct else "ОШИБКА ❌",
+        "status": "УСПЕШНО" if is_correct else "ОШИБКА",
         "seq_time": f"{seq_time:.4f} сек",
         "matrix_size": f"{size}x{size}"
     }
     
-    print("\n--- Отчет о проверке ---")
+    print(f"\n--- Отчет о проверке ---")
     print(f"Размер матрицы: {report['matrix_size']}")
     print(f"Последовательное время: {report['seq_time']}")
     print(f"Статус совпадения с OpenMP: {report['status']}")
