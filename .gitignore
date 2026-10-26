@@ -49,3 +49,11 @@ vcpkg_installed/
 
 Testing/
 .cache/
+
+lab2/lab2_omp
+lab2/result_matrix.txt
+lab2/matrix_A.txt
+lab2/matrix_B.txt
+lab2/graph_time.png
+lab2/graph_speedup.png
+lab2/plot.py
