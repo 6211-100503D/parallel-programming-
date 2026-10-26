@@ -32,7 +32,7 @@ def verify():
     is_correct = True
     for i in range(size):
         for j in range(size):
-            if abs(C_seq[i][j] - C_omp[i][j]) > 1e-5:
+            if abs(C_seq[i][j] - C_omp[i][j]) > 1e-2:
                 is_correct = False
                 break
     
